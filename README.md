@@ -13,13 +13,15 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Database Setup
 
 We use Prisma as our ORM.
+
+First add the database connection strings to `.env`. Change 'mydb' to your own database name.
+```
+POSTGRES_PRISMA_URL="postgresql://postgres@localhost:5432/mydb?schema=public"
+POSTGRES_URL_NON_POOLING="postgresql://postgres@localhost:5432/mydb?schema=public"
+```
 
 Sync the database with the Prisma schema
 ```bash
