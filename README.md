@@ -23,6 +23,11 @@ POSTGRES_PRISMA_URL="postgresql://postgres@localhost:5432/mydb?schema=public"
 POSTGRES_URL_NON_POOLING="postgresql://postgres@localhost:5432/mydb?schema=public"
 ```
 
+Second install the Prisma client and generate the Prisma Client API
+```bash
+yarn prisma generate
+```
+
 Sync the database with the Prisma schema
 ```bash
 yarn prisma db push
